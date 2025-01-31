@@ -1,0 +1,21 @@
+{
+  "name": "stage-0",
+  "version": "1.0.0",
+  "description": "This project is a public API that returns basic information including the registered email address, current datetime, and GitHub URL of the project's codebase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantle-bearer/Stage-0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mantle-bearer/Stage-0/issues"
+  },
+  "homepage": "https://github.com/mantle-bearer/Stage-0#readme"
+}

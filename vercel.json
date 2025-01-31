@@ -1,14 +1,10 @@
 {
-  "version": 2,
-  "functions": {
-    "index.php": {
-      "runtime": "@vercel/php"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.php"
-    }
-  ]
-}
+    "version": 2,
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/api/index.js"
+      }
+    ]
+  }
+  
