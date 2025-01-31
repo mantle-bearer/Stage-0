@@ -1,34 +1,27 @@
-# HNG12 Stage 0 Task
+# Public API
 
-## Project Description
+## Introduction
 
-This project is a public API that returns basic information including the registered email address, current datetime, and GitHub URL of the project's codebase.
+Welcome to this Public API project that Retrieves Basic Information about me. This project is a simple public API that provides basic information such as:
 
-## Setup Instructions
+- My registered email address.
+- The current date and time in **ISO 8601** format.
+- The GitHub URL of this current project's repository.
 
-1. Clone the repository:
+## Features
 
-   ```sh
-   git clone https://github.com/yourusername/your-repo.git
-   ```
+- Accepts **GET** requests.
+- Returns data in **JSON format**.
+- Deployed using **Vercel**.
+- Supports **CORS** for cross-origin requests.
 
-2. Navigate to the project directory:
+## API Endpoint
 
-   ```sh
-   cd your-repo
-   ```
+- **Base URL:** `<https://stage-0-theta.vercel.app/>`
+- **HTTP Method:** `GET`
+- **Response Format:** `application/json`
 
-3. Deploy the project to Vercel or any similar platform that supports PHP.
-
-## API Documentation
-
-### Endpoint
-
-- GET <your-url>
-
-### Response Format
-
-- 200 OK
+### Sample Response
 
 ```json
 {
@@ -38,157 +31,65 @@ This project is a public API that returns basic information including the regist
 }
 ```
 
-### Example Usage
+## How to Run Locally
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (LTS version recommended)
+- **Vercel CLI**
+
+### Steps to Run Locally
+
+1. **Clone the Repository**
+
+   ```sh
+   git clone https://github.com/mantle-bearer/Stage-0.git
+   cd Stage-0
+   ```
+
+2. **Install Dependencies** (if required)
+
+   ```sh
+   npm install
+   ```
+
+3. **Run Locally using Vercel**
+   ```sh
+   vercel dev
+   ```
+   The API should now be available at `http://localhost:3000/api/index.js`.
+
+## Deployment
+
+To deploy the project to Vercel, run:
 
 ```sh
-    curl -X GET <your-url>
+vercel --prod
 ```
 
-## Backlink
+Vercel will provide a public URL for your API.
 
-### Step-by-Step Plan
+## Technical Details
 
-1. **Set Up Project**:
+- **Language:** JavaScript (Node.js)
+- **Framework:** Serverless function
+- **Hosting:** Vercel
+- **CORS Handling:** Enabled for all origins (`Access-Control-Allow-Origin: *`)
 
-   - Create a new PHP project.
-   - Initialize a GitHub repository and push the initial code.
+## Additional Resources
 
-2. **Develop the API**:
+- [Node.js Developers Hiring - HNG](https://hng.tech/hire/nodejs-developers)
+- [Vercel Documentation](https://vercel.com/docs)
 
-   - Create an endpoint that handles GET requests.
-   - Return the required JSON response with email, current datetime, and GitHub URL.
+## Submission Checklist
 
-3. **Handle CORS**:
+- [ ] API deployed to a publicly accessible URL.
+- [ ] JSON response follows the required format.
+- [ ] Code hosted on a public GitHub repository.
+- [ ] README.md includes setup instructions and API details.
 
-   - Ensure the API handles CORS appropriately.
+## License
 
-4. **Deploy the API**:
-
-   - Deploy the API to Vercel or a similar platform.
-
-5. **Documentation**:
-
-   - Write a README.md file with project description, setup instructions, and API documentation.
-
-6. **Test the API**:
-   - Test the API thoroughly to ensure it meets all requirements.
-
-### Code Implementation
-
-#### 1. Set Up Project
-
-- Create a new directory for the project.
-- Initialize a GitHub repository and push the initial code.
-
-#### 2. Develop the API
-
-Create a file `index.php` with the following content:
-
-```php
-<?php
-header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
-
-$response = [
-    "email" => "your-email@example.com",
-    "current_datetime" => gmdate("c"),
-    "github_url" => "https://github.com/yourusername/your-repo"
-];
-
-echo json_encode($response);
-?>
-```
-
-#### 3. Handle CORS
-
-- CORS is handled by the `Access-Control-Allow-Origin` header in the `index.php` file.
-
-#### 4. Deploy the API
-
-- Create a `vercel.json` file for Vercel deployment:
-
-```json
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.php",
-      "use": "@vercel/php"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.php"
-    }
-  ]
-}
-```
-
-- Deploy the project to Vercel by following their deployment instructions.
-
-#### 5. Documentation
-
-Create a `README.md` file with the following content:
-
-````markdown
-# HNG12 Stage 0 Task
-
-## Project Description
-
-This project is a public API that returns basic information including the registered email address, current datetime, and GitHub URL of the project's codebase.
-
-## Setup Instructions
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/your-repo.git
-   ```
-````
-
-2. Navigate to the project directory:
-   ```sh
-   cd your-repo
-   ```
-3. Deploy the project to Vercel or any similar platform that supports PHP.
-
-## API Documentation
-
-### Endpoint
-
-- **GET** `<your-url>`
-
-### Response Format
-
-- **200 OK**
-
-```json
-{
-  "email": "your-email@example.com",
-  "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/yourusername/your-repo"
-}
-```
-
-## Example Usage
-
-```sh
-curl -X GET <your-url>
-```
-
-## Backlink
-
-- [Hire PHP Developers](https://hng.tech/hire/php-developers)
-
-```
-
-#### 6. Test the API
-- Use tools like Postman or curl to test the API endpoint and ensure it meets all requirements.
-
-### Final Steps
-- Submit the task through the designated form.
-- Follow the instructions in the #track-backend channel to complete grading.
-
-
-
-```
+This project is licensed under the **MIT License**.
